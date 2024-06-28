@@ -27,8 +27,6 @@ source venv/bin/activate
 #### Step3: Install Dependencies
 
 ```bash
-pip install flask
-pip install gunicorn
 pip install -r requirements.txt
 ```
 
@@ -64,13 +62,13 @@ docker run -p -p8080:8080 app_py
 docker tag app_py:latest bola278/app_py:latest
 ```
 
-#### Step 2: Log In to Docker Hub
+#### Step 2: Login to Docker Hub
 
 ```bash
 docker login
 ```
 
-#### Step 3: Push Docker Hub
+#### Step 3: Push to Docker Hub
 
 ```bash
 docker push bola278/app_py:latest
