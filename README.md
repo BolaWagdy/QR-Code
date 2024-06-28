@@ -5,7 +5,7 @@
 
 # Installation
 
-## 1. Python3: 
+## 1. Python3
 - Ensure you have Python installed. Download it from [python.org](https://www.python.org/downloads/).
 
 ### Documentation
