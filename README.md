@@ -1,3 +1,5 @@
+# QR-Code Generator
+
 # Features
 
 - Generate QR codes for any text or URL.
