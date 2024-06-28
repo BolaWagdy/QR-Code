@@ -56,7 +56,7 @@ docker run -p -p8080:8080 app_py
 
 ### Push to Docker Hub
 > [!NOTE]  
-> `Username: bola278   &   Reponame: app_py`              
+> Link on Dockerhub: https://hub.docker.com/repository/docker/bola278/app_py/general            
 
 #### Step 1: Tag Your Docker Image
 
