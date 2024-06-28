@@ -8,8 +8,6 @@
 ## 1. Python3: 
 - Ensure you have Python installed. Download it from [python.org](https://www.python.org/downloads/).
 
-
-
 ### Documentation
 
 #### Step1: Clone the repository
@@ -33,6 +31,7 @@ pip install flask
 pip install gunicorn
 pip install -r requirements.txt
 ```
+
 ## 2. Docker
 - For Docker-based installation, ensure Docker is installed from this steps.
 
@@ -55,23 +54,10 @@ docker build -t app_py .
 docker run -p -p8080:8080 app_py
 ```
 
-
 ### Push to Docker Hub
 > [!NOTE]  
-> Highlights information that users should take into account, even when skimming.
-
-> [!TIP]
-> Optional information to help a user be more successful.
-
-> [!IMPORTANT]  
-> Crucial information necessary for users to succeed.
-
-> [!WARNING]  
-> Critical content demanding immediate user attention due to potential risks.
-
-> [!CAUTION]
-> Negative potential consequences of an action.
-
+> Username: bola278
+> Reponame: app_py
 
 #### Step 1: Tag Your Docker Image
 
