@@ -11,7 +11,7 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -35,20 +35,20 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Log in to DockerHub
-      run: echo "${{ secrets.dockerhub0505 }}" | docker login -u "${{ secrets.bola278 }}" --password-stdin
+      run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u bola278 --password-stdin
 
     - name: Build Docker image
-      run: docker build -t ${{ secrets.bola278 }}/qr-code-app:latest .
+      run: docker build -t bola278/qr-code-app:latest .
 
     - name: Push Docker image
-      run: docker push ${{ secrets.bola278 }}/qr-code-app:latest
+      run: docker push bola278/qr-code-app:latest
 
     - name: Tag Docker image if tag is present
       if: startsWith(github.ref, 'refs/tags/')
       run: |
         TAG_NAME=${GITHUB_REF##*/}
-        docker tag ${{ secrets.bola278 }}/qr-code-app:latest ${{ secrets.bola278 }}/qr-code-app:$TAG_NAME
-        docker push ${{ secrets.bola278 }}/qr-code-app:$TAG_NAME
+        docker tag bola278/qr-code-app:latest bola278/qr-code-app:$TAG_NAME
+        docker push bola278/qr-code-app:$TAG_NAME
