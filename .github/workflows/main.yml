@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  lint-and-test:
+  test:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,7 +31,7 @@ jobs:
 
   build-and-push-docker:
     runs-on: ubuntu-latest
-    needs: lint-and-test
+    needs: test
 
     steps:
     - name: Checkout code
@@ -41,7 +41,7 @@ jobs:
       run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u bola278 --password-stdin
 
     - name: Build Docker image
-      run: docker build -t bola278/qr-code-app:latest .
+      run: cd app_py && docker build -t bola278/qr-code-app:latest .
 
     - name: Push Docker image
       run: docker push bola278/qr-code-app:latest
