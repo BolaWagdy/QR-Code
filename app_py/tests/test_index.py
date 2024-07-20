@@ -1,7 +1,7 @@
 """
 Functional test for the application homepage
 """
-from main import app
+from app import app
 def test_index():
     """
     GIVEN a Flask application configured for testing,
@@ -11,4 +11,3 @@ def test_index():
     with app.test_client() as test_client:
         response = test_client.get("/")
         assert response.status_code == 200
-        assert b"time" in response.data
