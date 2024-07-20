@@ -22,7 +22,7 @@ cd QR-Code
 #### Step2: Virtual Environment
 
 ```bash
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
 ```
 
@@ -51,7 +51,7 @@ docker run hello-world
 
 ```bash
 docker build -t app_py .
-docker run -p -p8080:8080 app_py
+docker run -p8080:8080 app_py
 ```
 
 ### Push to Docker Hub
