@@ -1,4 +1,5 @@
 # QR-Code Generator
+![example workflow](https://github.com/BolaWagdy/QR-Code/actions/workflows/main.yml/badge.svg)
 
 # Features
 
