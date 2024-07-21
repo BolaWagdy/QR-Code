@@ -32,7 +32,7 @@ def index():
         location = get_location(ip_address)
         log_visit(ip_address, text, location) 
         return send_file(buffer, mimetype='image/png', as_attachment=True, download_name='qrcode.png')
-    return render_template('home.html')
+    return render_template('index.html')
 
 def log_visit(ip_address, text, location):
     log_entry = {
